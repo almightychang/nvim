@@ -17,6 +17,9 @@
 
   "javascript.suggest.autoImports": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["c", "cpp", "python"],
-  "python.linting.enabled": true
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "python.linting.enabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.venvPath": ".venv",
+  "python.linting.pylintEnabled": true
 }

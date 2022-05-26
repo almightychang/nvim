@@ -131,13 +131,13 @@ let g:lightline = {
                 \   'right': [ [ 'virtualenv', 'lineinfo' ],
                 \              [ 'percent' ],
                 \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+            \ },
+            \ 'component_function' : {
+                \   'gitbranch' : 'gitbranch#name',
+                \   'filetype': 'MyFiletype',
+                \   'fileformat': 'MyFileformat',
                 \ },
-                \ 'component_function' : {
-                    \   'gitbranch' : 'gitbranch#name',
-                    \   'filetype': 'MyFiletype',
-                    \   'fileformat': 'MyFileformat',
-                    \ },
-                    \ }
+            \ }
 "
 
 

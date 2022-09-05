@@ -8,6 +8,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/sonokai'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'epwalsh/obsidian.nvim'
 call plug#end()
 
 " Basic 
@@ -76,6 +79,16 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 " 
 
 
+lua <<EOF
+require("obsidian").setup({
+  dir = "~/my-vault",
+  completion = {
+    nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
+  }
+})
+EOF
+
+
 " treesitter 
 " Highlight 
 lua <<EOF
@@ -87,6 +100,7 @@ require'nvim-treesitter.configs'.setup {
     }, 
     highlight = {
         enable = true,
+        additional_vim_regex_highlighting = { "markdown" },
         },
     indent = {
         enable = false

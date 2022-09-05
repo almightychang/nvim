@@ -163,7 +163,8 @@ let g:coc_global_extensions = ['coc-json',
             \ 'coc-svg',
             \ 'coc-prettier',
             \ 'coc-swagger',
-            \ 'coc-docker']
+            \ 'coc-docker',
+            \ 'coc-highlight']
 " \ 'coc-clangd',
 " \ 'coc-python',
 
@@ -231,6 +232,7 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+set updatetime=1000
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)

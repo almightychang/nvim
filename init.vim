@@ -8,9 +8,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/sonokai'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-lua/plenary.nvim'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'epwalsh/obsidian.nvim'
 call plug#end()
 
 " Basic 
@@ -78,15 +75,6 @@ endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 " 
 
-
-lua <<EOF
-require("obsidian").setup({
-  dir = "~/my-vault",
-  completion = {
-    nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
-  }
-})
-EOF
 
 
 " treesitter 
@@ -164,7 +152,8 @@ let g:coc_global_extensions = ['coc-json',
             \ 'coc-prettier',
             \ 'coc-swagger',
             \ 'coc-docker',
-            \ 'coc-highlight']
+            \ 'coc-highlight',
+            \ 'coc-pairs']
 " \ 'coc-clangd',
 " \ 'coc-python',
 

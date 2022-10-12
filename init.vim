@@ -26,6 +26,8 @@ set laststatus=2
 set noshowmode
 set autoread
 
+set tags=tags,/usr/bin/arm-none-eabi/tags
+
 filetype indent on
 
 "autocmd FileType javascript setlocal shiftwidth=2 tabstop=2                                                   

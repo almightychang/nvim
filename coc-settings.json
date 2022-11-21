@@ -17,7 +17,7 @@
 
   "javascript.suggest.autoImports": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSave": true,
   "python.linting.enabled": true,
   "python.formatting.provider": "yapf",
   "python.venvPath": ".venv",

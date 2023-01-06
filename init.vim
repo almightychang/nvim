@@ -1,6 +1,7 @@
 call plug#begin("~/.vim/plugged")
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 "Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons'
 Plug 'itchyny/lightline.vim'
@@ -8,6 +9,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/sonokai'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " Basic 

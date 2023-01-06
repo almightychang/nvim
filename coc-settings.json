@@ -19,8 +19,8 @@
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSave": true,
   "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
   "python.formatting.provider": "yapf",
   "python.venvPath": ".venv",
-  "python.linting.pylintEnabled": true,
   "pyright.disableDiagnostics": true
 }

@@ -5,8 +5,11 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 "Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons'
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'sainnhe/sonokai'
+"Plug 'sainnhe/sonokai'
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'EdenEast/nightfox.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -107,22 +110,23 @@ EOF
 if has('termguicolors')
     set termguicolors
 endif
-" The configuration options should be placed before `colorscheme sonokai`.
-let g:sonokai_style = 'andromeda' " 'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'
-let g:sonokai_enable_italic = 1
-"let g:sonokai_disable_italic_comment = 1
-colorscheme sonokai
-" 
 
+"colorscheme sonokai
+" The configuration options should be placed before `colorscheme sonokai`.
+"let g:sonokai_style = 'andromeda' " 'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'
+"let g:sonokai_enable_italic = 1
+"let g:sonokai_disable_italic_comment = 1
+
+colorscheme nordfox
 
 " lightline
 let g:lightline = {
-            \ 'colorscheme': 'sonokai',
+            \ 'colorscheme': 'nordfox',
             \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
             \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
             \ 'active' : {
                 \   'left' : [ [ 'mode', 'paste' ],
-                \              [ 'git', 'readonly', 'absolutepath', 'modified' ] ],
+                \              [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ],
                 \   'right': [ [ 'virtualenv', 'lineinfo' ],
                 \              [ 'percent' ],
                 \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -157,7 +161,8 @@ let g:coc_global_extensions = ['coc-json',
             \ 'coc-swagger',
             \ 'coc-docker',
             \ 'coc-highlight',
-            \ 'coc-pairs']
+            \ 'coc-pairs',
+            \ 'coc-xml']
 " \ 'coc-clangd',
 " \ 'coc-python',
 

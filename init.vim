@@ -15,6 +15,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'terrastruct/d2-vim'
 Plug 'peterhoeg/vim-qml'
+Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Basic 

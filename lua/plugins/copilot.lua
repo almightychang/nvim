@@ -7,6 +7,9 @@ local spec = {
     opts = {
       suggestion = {
         auto_trigger = true,
+        keymap = {
+          accept = "<C-l>",
+        },
       },
     },
   },

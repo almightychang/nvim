@@ -21,3 +21,11 @@ lspconfig.tsserver.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+lspconfig.ccls.setup {
+  init_options = {
+    cache = {
+      directory = "/tmp/ccls",
+    },
+  },
+}

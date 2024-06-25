@@ -24,7 +24,10 @@ return {
         "html-lsp",
         "css-lsp",
         "prettier",
-        "rust-analyzer"
+        "rust-analyzer",
+        "isort",
+        "black",
+        "pylint",
       },
     },
   },
@@ -39,7 +42,7 @@ return {
         "html",
         "css",
         "rust",
-        "python"
+        "python",
       },
     },
   },

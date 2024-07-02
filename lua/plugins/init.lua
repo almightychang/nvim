@@ -46,6 +46,7 @@ return {
         "css",
         "rust",
         "python",
+        "qmljs",
       },
     },
   },

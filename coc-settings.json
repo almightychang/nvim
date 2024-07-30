@@ -12,6 +12,18 @@
           "extraArgs": ["--sysroot=/usr/bin/arm-none-eabi"]
         }
       }
+    },
+    "qml": {
+      "command": "qmlls",
+      "filetypes": ["qml"]
+    },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     }
   },
 
@@ -20,7 +32,8 @@
   "coc.preferences.formatOnSave": true,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.formatting.provider": "yapf",
+  "python.formatting.provider": "black",
   "python.venvPath": ".venv",
-  "pyright.disableDiagnostics": true
+  "pyright.disableDiagnostics": true,
+  "pyright.organizeimports.provider": "isort"
 }

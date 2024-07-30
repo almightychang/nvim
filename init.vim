@@ -18,6 +18,8 @@ Plug 'peterhoeg/vim-qml'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'github/copilot.vim'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " Basic 
@@ -36,7 +38,7 @@ set laststatus=2
 set noshowmode
 set autoread
 
-set tags=tags,/usr/bin/arm-none-eabi/tags
+set tags=tags,/usr/bin/arm-none-eabi/tags,/opt/aniai/libs/qt-6.6.2/tags
 
 filetype indent on
 
@@ -96,7 +98,7 @@ require'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "bash", "c", "cmake", "comment", "cpp", "css", "dockerfile", "html",
         "http", "java", "javascript", "json", "lua", "make", "python", 
-        "typescript", "vim", "yaml"
+        "typescript", "vim", "yaml", "query"
     }, 
     highlight = {
         enable = true,
@@ -157,7 +159,6 @@ let g:coc_global_extensions = ['coc-json',
             \ 'coc-eslint',
             \ 'coc-html',
             \ 'coc-tsserver',
-            \ 'coc-tslint',
             \ 'coc-pyright',
             \ 'coc-stylelint',
             \ 'coc-yaml',
@@ -313,3 +314,15 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+lua << EOF
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})
+local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+ft_to_parser.mdx = "markdown"
+EOF
+
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

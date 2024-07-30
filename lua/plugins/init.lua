@@ -35,6 +35,8 @@ return {
         "buf-language-server",
         "kotlin-language-server",
         "ktlint",
+        "mdx-analyzer",
+        "typescript-language-server",
       },
     },
   },

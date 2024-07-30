@@ -6,6 +6,9 @@ local options = {
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
     javascript = { "prettier" },
+    cpp = { "clang-format" },
+    proto = { "buf" },
+    kotlin = { "ktlint" },
     -- html = { "prettier" },
   },
 

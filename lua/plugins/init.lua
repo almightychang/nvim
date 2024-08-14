@@ -37,6 +37,7 @@ return {
         "ktlint",
         "mdx-analyzer",
         "typescript-language-server",
+        "pyright",
       },
     },
   },

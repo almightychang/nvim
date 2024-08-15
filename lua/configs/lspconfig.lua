@@ -27,5 +27,10 @@ lspconfig.ccls.setup {
     cache = {
       directory = "/tmp/ccls",
     },
+    clang = {
+      extraArgs = {
+        "--sysroot=/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include",
+      },
+    },
   },
 }

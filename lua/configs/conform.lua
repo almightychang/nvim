@@ -9,6 +9,7 @@ local options = {
     cpp = { "clang-format" },
     proto = { "buf" },
     kotlin = { "ktlint" },
+    json = { "prettier" },
     -- html = { "prettier" },
   },
 

@@ -12,6 +12,7 @@ local servers = {
   "kotlin_language_server",
   "pyright",
   "ruff",
+  "slint_lsp",
 }
 
 -- lsps with default config

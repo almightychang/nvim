@@ -13,6 +13,7 @@ local servers = {
   "pyright",
   "ruff",
   "slint_lsp",
+  "ts_ls",
 }
 
 -- lsps with default config
@@ -23,13 +24,6 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
 
 lspconfig.ccls.setup {
   init_options = {

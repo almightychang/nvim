@@ -9,8 +9,14 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
 
+vim.o.exrc = true
 vim.opt.rtp:prepend(lazypath)
 vim.opt.clipboard = "unnamedplus"
+vim.filetype.add {
+  extension = {
+    slint = "slint",
+  },
+}
 
 local lazy_config = require "configs.lazy"
 

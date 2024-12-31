@@ -39,6 +39,7 @@ return {
         "typescript-language-server",
         "pyright",
         "slint-lsp",
+        "taplo",
       },
     },
   },
